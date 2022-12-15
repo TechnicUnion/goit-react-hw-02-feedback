@@ -12,23 +12,10 @@ class Counter extends React.Component {
 
   onButtonClik = event => {
     const target = event.target.textContent.toLowerCase();
-    console.log(target);
     this.setState(prevState => ({
       [target]: prevState[target] + 1,
     }));
   };
-
-  //   onNeutralButtonClik = () => {
-  //     this.setState(prevState => ({
-  //       neutral: prevState.neutral + 1,
-  //     }));
-  //   };
-
-  //   onBadButtonClik = () => {
-  //     this.setState(prevState => ({
-  //       bad: prevState.bad + 1,
-  //     }));
-  //   };
 
   countTotalFeedback = () => {
     return this.state.good + this.state.bad + this.state.neutral;
@@ -42,7 +29,10 @@ class Counter extends React.Component {
     return (
       <div>
         <h2 className={css.title}>Please leave feedback</h2>
-        <FeedbackOptions onLeaveFeedback={this.onButtonClik} />
+        <FeedbackOptions
+          options={['Good', 'Neutral', 'Bad']}
+          onLeaveFeedback={this.onButtonClik}
+        />
 
         <h2 className={css.title}>Statistics</h2>
 
