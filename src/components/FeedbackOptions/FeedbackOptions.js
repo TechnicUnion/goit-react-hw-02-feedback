@@ -3,10 +3,10 @@ import css from './FeedbackOptions.module.css';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <div className={css.buttonList}>
       {options.map(item => (
         <button className={css.button} key={item} onClick={onLeaveFeedback}>
-          {item}
+          {`${item.charAt(0).toUpperCase()}${item.slice(1)}`}
         </button>
       ))}
     </div>

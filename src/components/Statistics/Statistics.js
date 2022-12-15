@@ -9,7 +9,7 @@ export default function Statistics(props) {
       <li>Neutral: {neutral}</li>
       <li>Bad: {bad}</li>
       <li>Total: {total}</li>
-      <li>Positive feedbac: {positivePercentage}%</li>
+      <li>Positive feedback: {positivePercentage}%</li>
     </ul>
   );
 }

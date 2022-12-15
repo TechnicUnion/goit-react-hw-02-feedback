@@ -36,7 +36,7 @@ class Counter extends React.Component {
           />
         </Section>
 
-        <Section title={'Ststistics'}>
+        <Section title={'Statistics'}>
           {this.countTotalFeedback() > 0 ? (
             <Statistics
               good={this.state.good}
@@ -46,7 +46,7 @@ class Counter extends React.Component {
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message={'There is no feedback'}></Notification>
           )}
         </Section>
       </div>
