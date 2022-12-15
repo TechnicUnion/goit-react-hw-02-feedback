@@ -1,0 +1,13 @@
+.title{
+    font-size: 28px;
+}
+
+.button{
+    margin-right: 5px;
+}
+
+.ststisticsList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
